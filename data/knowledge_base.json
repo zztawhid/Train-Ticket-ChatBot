@@ -1,0 +1,287 @@
+{
+  "intents": [
+    {
+      "tag": "greet",
+      "patterns": [
+        "hello", "hi", "hey", "hiya", "howdy",
+        "good morning", "good afternoon", "good evening",
+        "morning", "afternoon", "evening",
+        "yo", "greetings", "hi there", "hey there", "hello there"
+      ],
+      "responses": [
+        "Hello! Welcome to the National Rail Ticket Assistant. How can I help you today?",
+        "Hi there! I can help you find the cheapest train tickets. Where would you like to travel?",
+        "Hey! Ready to plan a train journey? Tell me where you'd like to go.",
+        "Hello! 🚆 I'm here to help you find train tickets. Where to?",
+        "Hi! Looking for a train? Tell me your departure and destination stations."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye", "goodbye", "see you", "see ya", "cheers",
+        "thank you", "thanks", "thanks bye", "thanks a lot",
+        "have a good day", "have a nice day", "take care",
+        "later", "catch you later", "good night", "goodnight"
+      ],
+      "responses": [
+        "Goodbye! Have a wonderful journey! 🚆",
+        "Thanks for using the National Rail assistant. Safe travels!",
+        "Bye! Hope I was helpful. Have a great trip!",
+        "Take care, and enjoy your journey!",
+        "Cheers! Hope your travels go smoothly."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "help", "info", "information",
+        "what can you do", "what do you do", "how does this work",
+        "how do you work", "who are you", "what are you",
+        "what is this", "what's this", "can you help me",
+        "i need help", "show me", "show me what you can do",
+        "guide me", "explain"
+      ],
+      "responses": [
+        "I can help you find the cheapest train tickets in the UK! Just tell me:\n- Where you're travelling **from** and **to**\n- When you want to travel\n- Whether you need a **single** or **return** ticket\n\nI'll then search for the best fares for you.\n\nI can also predict arrival times if your train is delayed — switch to the **Live Delay (Task 2)** option in the sidebar."
+      ]
+    },
+    {
+      "tag": "find_ticket",
+      "patterns": [
+        "find ticket", "find tickets", "find a ticket", "find me a ticket",
+        "search ticket", "search for a ticket", "search for tickets",
+        "book ticket", "book a ticket", "book train", "book a train",
+        "book me a train", "book me a ticket", "book a journey",
+        "buy ticket", "buy a ticket", "buy train tickets",
+        "get me a ticket", "get a ticket", "get tickets",
+        "find train", "find a train", "find me a train",
+        "cheapest ticket", "cheapest train", "cheapest fare",
+        "what is the cheapest", "what's the cheapest",
+        "i want a ticket", "i want a train ticket", "i want tickets",
+        "i need a ticket", "i need a train", "i need to travel",
+        "i would like a ticket", "i'd like a ticket", "id like a ticket",
+        "i want to book", "i need to book", "i would like to book",
+        "i'd like to book", "id like to book",
+        "i want to travel", "i need to travel", "i want to go",
+        "can i book a ticket", "can i book a train",
+        "can you find me a ticket", "can you book me a ticket",
+        "can you book a ticket", "can you find a train",
+        "could you book a ticket", "could you find a ticket",
+        "could you find me a train", "could you help me book",
+        "please find a ticket", "please book a ticket",
+        "please help me find a train", "help me book",
+        "how much is a ticket", "how much is the train",
+        "how much for a train", "how much will it cost",
+        "what does it cost", "what's the price",
+        "show me train times", "show me tickets",
+        "train to", "train from", "trains from", "trains to",
+        "from x to y", "going to", "going from"
+      ],
+      "responses": [
+        "Great, let's find you a ticket! Which station will you be departing from?",
+        "Sure! Where will you be travelling from?",
+        "Happy to help. Which station are you setting off from?"
+      ]
+    },
+    {
+      "tag": "affirm",
+      "patterns": [
+        "yes", "yeah", "yep", "yea", "yup", "ya",
+        "correct", "that's right", "thats right", "right",
+        "sure", "absolutely", "definitely",
+        "ok", "okay", "k", "fine",
+        "confirm", "confirmed", "go ahead", "do it",
+        "sounds good", "looks good", "perfect", "great"
+      ],
+      "responses": ["Perfect!", "Got it!", "Great, thanks!"]
+    },
+    {
+      "tag": "deny",
+      "patterns": [
+        "no", "nope", "nah", "not really", "not quite",
+        "wrong", "incorrect", "that's wrong", "that's not right",
+        "change", "change it", "edit",
+        "start over", "restart", "start again", "go back",
+        "cancel", "stop"
+      ],
+      "responses": [
+        "No problem. Let's start again. Where would you like to travel from?",
+        "Got it, let's go back. Where would you like to depart from?"
+      ]
+    },
+    {
+      "tag": "delay_prediction",
+      "patterns": [
+        "my train is delayed", "train delayed", "is my train late",
+        "predict arrival", "when will my train arrive",
+        "delay prediction", "predict delay", "how late",
+        "what time will i arrive", "when will i arrive",
+        "i'm running late", "train is running late"
+      ],
+      "responses": [
+        "I can help predict that! Please switch to the **Live Delay (Task 2)** option in the sidebar — I'll ask for your direction, current station, destination, and how many minutes you're delayed."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is a CRS code?",
+      "answer": "A CRS code is a 3-letter Computer Reservation System code used to identify UK railway stations. For example, Norwich is NRW and London Liverpool Street is LST."
+    },
+    {
+      "question": "How do I get a refund?",
+      "answer": "For refund queries, please visit the National Rail website at nationalrail.co.uk or contact the train operator you booked with directly. Refund eligibility depends on the type of ticket you bought — Advance tickets generally cannot be refunded but may be changed for a fee, while Off-Peak and Anytime tickets are usually fully refundable before travel."
+    },
+    {
+      "question": "What are peak hours?",
+      "answer": "Peak hours typically run from 06:00–09:30 and 16:00–19:00 on weekdays, but this varies by operator. Off-peak tickets are usually cheaper and can only be used outside these times."
+    },
+    {
+      "question": "What is a railcard?",
+      "answer": "A Railcard gives you 1/3 off rail fares. Types include 16-25 Railcard, Senior Railcard (60+), Family & Friends, Two Together, Disabled Persons, Network Railcard, and more. They cost around £30 a year and pay for themselves quickly if you travel regularly. Visit railcard.co.uk for details."
+    },
+    {
+      "question": "Do children need tickets?",
+      "answer": "Children aged 5-15 travel for roughly half the adult fare. Under 5s travel free. Up to 2 children under 5 can travel free with each fare-paying passenger."
+    },
+    {
+      "question": "What is the difference between single and return?",
+      "answer": "A **single** ticket is for one-way travel only. A **return** ticket covers both the outward and return journey, and is often cheaper than buying two singles."
+    },
+    {
+      "question": "Can I change my travel date?",
+      "answer": "Whether you can change your travel date depends on the ticket type. Advance tickets are tied to a specific train and usually require a fee to change. Off-Peak and Anytime tickets offer more flexibility and can often be changed without charge."
+    },
+    {
+      "question": "What stations can you search?",
+      "answer": "I can search for journeys between any UK railway station. I have over 2,500 stations in my database. Just tell me the station name and I'll find it — partial names and typos work too thanks to fuzzy matching."
+    },
+    {
+      "question": "What's the weather?",
+      "answer": "I don't have live weather data, but let's go with sunny! ☀️ I'm here to help with train tickets — try checking a weather app for the actual forecast."
+    },
+    {
+      "question": "What is an Advance ticket?",
+      "answer": "An Advance ticket is a discounted ticket tied to a specific train and time. They are usually the cheapest option but must be booked in advance (often up to 12 weeks ahead) and cannot be used on a different service. Limited numbers are released so they tend to sell out for popular routes."
+    },
+    {
+      "question": "What is an Off-Peak ticket?",
+      "answer": "An Off-Peak ticket can be used on trains outside the morning and evening peak hours. They are usually significantly cheaper than Anytime tickets and offer more flexibility than Advance tickets, since you can travel on any off-peak train rather than a specific one."
+    },
+    {
+      "question": "What is an Anytime ticket?",
+      "answer": "An Anytime ticket is fully flexible and can be used on any train, including peak-hour services. They are the most expensive type but the easiest to use — handy if you don't know exactly when you'll travel."
+    },
+    {
+      "question": "What is a Super Off-Peak ticket?",
+      "answer": "A Super Off-Peak ticket is even cheaper than an Off-Peak ticket, but with tighter restrictions on when you can use it — usually outside the main commuter and mid-morning periods. Check the ticket conditions for the specific times that apply to your route."
+    },
+    {
+      "question": "Do I need to print my ticket?",
+      "answer": "Most modern tickets are available as mobile e-tickets, so you can just show them on your phone at the barrier. Some tickets still need to be collected from a station machine using your booking reference. The booking confirmation will tell you which type you have."
+    },
+    {
+      "question": "How early should I book?",
+      "answer": "For the cheapest fares (Advance tickets), book as early as possible — they are typically released 12 weeks before travel. For Off-Peak and Anytime tickets, the price is the same whether you book now or on the day."
+    },
+    {
+      "question": "How long before departure should I arrive?",
+      "answer": "Most stations recommend arriving at least 10-15 minutes before departure, or 30 minutes for major terminus stations where you may need time to find your platform or collect tickets. Unlike air travel, there is no check-in for trains."
+    },
+    {
+      "question": "What if I miss my train?",
+      "answer": "If you have an Advance ticket and miss your booked train, you usually need to buy a new ticket — Advance tickets are only valid on the train you booked. With Off-Peak or Anytime tickets you can simply catch the next available service. If the delay was the operator's fault, you may be entitled to a refund or compensation."
+    },
+    {
+      "question": "What about delays and cancellations?",
+      "answer": "If your train is delayed by 15 minutes or more, you may be entitled to compensation via Delay Repay. The amount depends on how late you arrive. Visit the operator's website to claim. If your train is cancelled, you can usually use your ticket on the next available service or claim a full refund."
+    },
+    {
+      "question": "Can I take my bike on the train?",
+      "answer": "Yes, most train operators allow bikes on board, but reservation rules vary. Some routes (especially long-distance) require a free bike reservation, while others let you just turn up. Folding bikes can always be taken without reservation. Check the operator's website for the specific service."
+    },
+    {
+      "question": "Is there WiFi on the train?",
+      "answer": "Most long-distance trains in the UK offer free WiFi, though coverage can be patchy in remote areas. On commuter services it varies by operator. Look for the WiFi symbol on the train when you board."
+    },
+    {
+      "question": "Can I use my Oyster card?",
+      "answer": "Oyster and contactless cards work on most rail services within London and some surrounding zones. For longer-distance journeys you'll need a paper or e-ticket. Check the Transport for London website for the area covered by Oyster."
+    },
+    {
+      "question": "What is a season ticket?",
+      "answer": "A season ticket lets you travel between two stations as often as you like for a fixed period — typically weekly, monthly, or annual. They are good value if you commute the same route regularly. Annual season tickets work out to about 40 weeks of daily travel for the price of 52."
+    },
+    {
+      "question": "Are group discounts available?",
+      "answer": "GroupSave offers up to 1/3 off Off-Peak fares for groups of 3-9 adults travelling together on the same train. Many operators also offer group discounts for parties of 10+. Visit the operator's website for details on how to book a group booking."
+    },
+    {
+      "question": "Are children allowed to travel alone?",
+      "answer": "Children aged 14 and over can travel alone in the UK with a standard ticket. For younger children, some operators offer assisted-travel services if booked in advance. Check the National Rail website for the specific operator's policy on unaccompanied minors."
+    },
+    {
+      "question": "Is the station accessible?",
+      "answer": "Most major UK stations have step-free access, but not all do. You can request Passenger Assist for help boarding, alighting, or finding your way — this is free and can be booked online or by calling 0800 0223720, ideally a few hours before travel."
+    },
+    {
+      "question": "Can I take luggage?",
+      "answer": "Yes, you can take luggage on board — typically up to two large items plus one piece of hand luggage per passenger. There are no weight limits like on planes. For very large or heavy items (e.g. sports equipment), check the operator's policy first."
+    },
+    {
+      "question": "Can I take pets on the train?",
+      "answer": "Most UK train operators allow up to two small dogs or cats per passenger free of charge, provided they don't take up a seat. Larger dogs and assistance animals are also welcome. Check the operator's policy if you're travelling with anything unusual."
+    },
+    {
+      "question": "What is split ticketing?",
+      "answer": "Split ticketing means buying two or more tickets for one journey that together cost less than a single through-ticket. It's perfectly legal as long as your train stops at the split station. Many websites and apps will calculate this for you automatically."
+    },
+    {
+      "question": "I want to suicide",
+      "answer": "I'm really sorry to hear that you're feeling this way. It might help to talk to someone you trust about how you're feeling, like a close friend or family member. You could also consider reaching out to a mental health professional who can provide support and guidance — in the UK you can call **Samaritans on 116 123** (free, 24/7), or **111** for non-emergency NHS support, or **999** in an emergency. You're not alone and there are people who care about you and want to help ❤️."
+    }
+  ],
+  "rules": {
+    "conversation_flow": [
+      {
+        "condition": "origin_missing",
+        "action": "ask_origin",
+        "response": "Which station will you be departing from?"
+      },
+      {
+        "condition": "destination_missing",
+        "action": "ask_destination",
+        "response": "Which station would you like to travel to?"
+      },
+      {
+        "condition": "date_missing",
+        "action": "ask_date",
+        "response": "When would you like to travel? Please include a date and time — for example: *next Friday at 9am*, *15th July at 14:30*, or *tomorrow morning*."
+      },
+      {
+        "condition": "ticket_type_missing",
+        "action": "ask_ticket_type",
+        "response": "Would you like a **single** or **return** ticket?"
+      },
+      {
+        "condition": "return_date_missing",
+        "action": "ask_return_date",
+        "response": "When would you like to return? Please include a date and time — for example: *next Monday at 3pm* or *two days later at 10am*."
+      },
+      {
+        "condition": "all_collected",
+        "action": "confirm_details",
+        "response": "Let me confirm your journey details:"
+      }
+    ],
+    "fallback_responses": [
+      "I'm sorry, I didn't quite understand that. Could you rephrase?",
+      "I'm not sure what you mean. I can help you find train tickets — just tell me where you'd like to travel!",
+      "Sorry, I don't have an answer for that. Could you please put it another way?",
+      "I didn't catch that. Try telling me your departure station, destination, and travel date.",
+      "Hmm, I'm not sure how to respond to that. Let's focus on finding you a train ticket! Where are you travelling from?",
+      "That doesn't seem to be something I can help with. Let's get back to finding you a train ticket! Where would you like to go?"
+    ]
+  }
+}
